@@ -28,14 +28,22 @@
              indicating that the top edge of the Document 
              is currently aligned with the top edge of the 
              window's content area.
-            This property's value will then be compared with The offsetTop property,
+            This property's value will then be compared with that of the offsetTop property,
             which returns the top position (in pixels) relative to the parent. 
             The returned value includes: the top position, 
             and margin of the element. the top padding, 
             scrollbar and border of the parent.
             If no offset parent exists, the offset is
             relative to the document body. 
-            This is the case here. </p>
+            This is the case here! This is why we can compare them.
+            I did not understand why the content margin top needs to go down by
+            60 pixels. And is is just the margin top that goes down or also the new 
+            css class tom, who is responsible for the stickyness of the nav bar, by having a 
+            0 top in css?
+            To recreate this, i removed code ..... and added the elements separately if/else statement in 
+            the JS. This enabled me to test how tom reacts vs how the content class reacts 
+            when given a margintop style.
+         </p>
 
 
 
