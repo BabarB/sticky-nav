@@ -7,7 +7,41 @@
 
 </head>
 <h1>Sticky menu project</h1>
-<body>
-    
+<!--calling myFunction:-->
+<body onscroll = "MyFunction()">
+    <div class="header">
+        <h2>Scroll down!</h2>
+        <p>Scroll down to see the sticky effect</p>
+    </div>
+    <div class="navbar">
+        <!--void prevents it from leaving page-->
+        <a href="javascript:void(0)">Home</a>
+        <a href="javascript:void(0)">About</a>
+        <a href="javascript:void(0)">Contact</a>
+    </div>
+    <div class = "content">
+        <p>The navbar will stick to the top when you reach its scroll position.
+            The scroll position is the read-only Window property 
+             scrollY; it returns the number of pixels the document is 
+             currently scrolled along the vertical axis 
+             (that is, up or down) with a value of 0.0, 
+             indicating that the top edge of the Document 
+             is currently aligned with the top edge of the 
+             window's content area.
+            This property's value will then be compared with The offsetTop property,
+            which returns the top position (in pixels) relative to the parent. 
+            The returned value includes: the top position, 
+            and margin of the element. the top padding, 
+            scrollbar and border of the parent.
+            If no offset parent exists, the offset is
+            relative to the document body. 
+            This is the case here. </p>
+
+
+
+
+
+    </div>
+
 </body>
 </html>
