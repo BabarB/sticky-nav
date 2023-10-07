@@ -1,7 +1,7 @@
 
 const navbar = document.getElementById ("navbar");
 const sticky = navbar.offsetTop;
-console.log (sticky);
+
 
 
 function myFunction() {
@@ -11,9 +11,13 @@ function myFunction() {
         navbar.classList.add ("stickyCssClass");
         //avoid jump scroll of content by adding a margin top. 
         //Index always to be defined
-        document.getElementsByClassName("content")[0].style.marginTop = "60px";
+        //this does not work, why? console says it's 60px
+        document.getElementsByClassName("content")[0].style.paddingTop = "60px";
+        //console.log(document.getElementsByClassName("content")[0].style.paddingTop);
+        document.getElementsByID("contentInQuestion").style.paddingTop = "60px";
     }
     else{
         navbar.classList.remove("stickyCssClass");
-    }
+        document.getElementsByClassName("content")[0].style.paddingTop = "16px";
+    }//console.log(document.getElementsByClassName("content")[0].style.paddingTop);
 }

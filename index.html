@@ -25,7 +25,7 @@
         <a href="javascript:void(0)">About</a>
         <a href="javascript:void(0)">Contact</a>
     </div>
-    <div class = "content">
+    <div id="contentInQuestion" class = "content">
         <p>The navbar will stick to the top when you reach its scroll position.
             The scroll position is the read-only Window property 
              scrollY; it returns the number of pixels the document is 
@@ -44,11 +44,27 @@
             This is the case here! This is why we can compare them.
             I did not understand why the content margin top needs to go down by
             60 pixels. And is is just the margin top that goes down or also the new 
-            css class tom, who is responsible for the stickyness of the nav bar, by having a 
+            css class stickyCssClass, who is responsible for the stickyness of the nav bar, by having a 
             0 top in css?
-            To recreate this, i removed code ..... and added the elements separately if/else statement in 
-            the JS. This enabled me to test how tom reacts vs how the content class reacts 
-            when given a margintop style.
+            To recreate this, i removed code from css line 37-41 and added the elements separately if/else statement in 
+            the JS on line 15. This enabled me to test how stickyCssClass reacts vs how the content class reacts 
+            when given a margintop style.  
+            What I now understand: only the content class's padding top changes. 
+            This is because of the The next-sibling combinator (+) 
+            separates two selectors and matches the second element 
+            only if it immediately follows the first element, 
+            and both are children of the same parent element. Because stickyCssClass is sometimes present, sometimes not, the sibling 
+            combinator behaves like an if-else statement, executing and not 
+            executing depending on the presence of stickyCssClass. Therefore 
+            I was able to recreate it in the JS if-else statement. 
+            The element's style is manipulated by JS and it is important that 
+            when the stickyCssClass is not present, the content element's padding is reset to its 
+            original 16px (this would otherwise be done automatically by the adjacent sibling combinator).
+            
+
+
+            JUST BLABLA FROM THIS POINT
+            
          </p>
          <p>Don't bother typing “lorem ipsum” into Google translate. If you already tried, you may have gotten anything from "NATO" to "China", depending on how you capitalized the letters. The bizarre translation was fodder for conspiracy theories, but Google has since updated its “lorem ipsum” translation to, boringly enough, “lorem ipsum”.
 
