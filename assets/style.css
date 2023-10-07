@@ -17,6 +17,17 @@
     text-decoration: none;
     font-size: 17px;
 }
+/* Navbar pseudo */
+#navbar a:hover{
+    color: black;
+    background-color: bisque;
+}
+
+/* Navbar active class */
+
+#navbar .active{
+    color: green;
+}
 /* Page content */
 
 .content {
