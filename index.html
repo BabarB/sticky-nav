@@ -26,47 +26,10 @@
         <a href="javascript:void(0)">Contact</a>
     </div>
     <div id="contentInQuestion" class = "content">
-        <p>The navbar will stick to the top when you reach its scroll position.
-            The scroll position is the read-only Window property 
-             scrollY; it returns the number of pixels the document is 
-             currently scrolled along the vertical axis 
-             (that is, up or down) with a value of 0.0, 
-             indicating that the top edge of the Document 
-             is currently aligned with the top edge of the 
-             window's content area.
-            This property's value will then be compared with that of the offsetTop property,
-            which returns the top position (in pixels) relative to the parent. 
-            The returned value includes: the top position, 
-            and margin of the element. the top padding, 
-            scrollbar and border of the parent.
-            If no offset parent exists, the offset is
-            relative to the document body. 
-            This is the case here! This is why we can compare them.
-            I did not understand why the content margin top needs to go down by
-            60 pixels. And is is just the margin top that goes down or also the new 
-            css class stickyCssClass, who is responsible for the stickyness of the nav bar, by having a 
-            0 top in css?
-            To recreate this, i removed code from css line 37-41 and added the elements separately if/else statement in 
-            the JS on line 15. This enabled me to test how stickyCssClass reacts vs how the content class reacts 
-            when given a margintop style.  
-            What I now understand: only the content class's padding top changes. 
-            This is because of the The next-sibling combinator (+) 
-            separates two selectors and matches the second element 
-            only if it immediately follows the first element, 
-            and both are children of the same parent element. Because stickyCssClass is sometimes present, sometimes not, the sibling 
-            combinator behaves like an if-else statement, executing and not 
-            executing depending on the presence of stickyCssClass. Therefore 
-            I was able to recreate it in the JS if-else statement. 
-            The element's style is manipulated by JS and it is important that 
-            when the stickyCssClass is not present, the content element's padding is reset to its 
-            original 16px (this would otherwise be done automatically by the adjacent sibling combinator).
-            
-
-
-            JUST BLABLA FROM THIS POINT
-            
-         </p>
-         <p>Don't bother typing “lorem ipsum” into Google translate. If you already tried, you may have gotten anything from "NATO" to "China", depending on how you capitalized the letters. The bizarre translation was fodder for conspiracy theories, but Google has since updated its “lorem ipsum” translation to, boringly enough, “lorem ipsum”.
+        <p>The navbar will stick to the top when you reach its scroll position. </p>
+        <p>JUST BLABLA FROM THIS POINT</p> 
+        
+        <p>Don't bother typing “lorem ipsum” into Google translate. If you already tried, you may have gotten anything from "NATO" to "China", depending on how you capitalized the letters. The bizarre translation was fodder for conspiracy theories, but Google has since updated its “lorem ipsum” translation to, boringly enough, “lorem ipsum”.
 
             One brave soul did take a stab at translating the almost-not-quite-Latin. According to The Guardian, Jaspreet Singh Boparai undertook the challenge with the goal of making the text “precisely as incoherent in English as it is in Latin - and to make it incoherent in the same way”. As a result, “the Greek 'eu' in Latin became the French 'bien' [...] and the '-ing' ending in 'lorem ipsum' seemed best rendered by an '-iendum' in English.”
             
@@ -78,6 +41,17 @@
             “Rrow itself, let it be sorrow; let him love it; let him pursue it, ishing for its acquisitiendum. Because he will ab hold, uniess but through concer, and also of those who resist. Now a pure snore disturbeded sum dust. He ejjnoyes, in order that somewon, also with a severe one, unless of life. May a cusstums offficer somewon nothing of a poison-filled. Until, from a twho, twho chaffinch may also pursue it, not even a lump. But as twho, as a tank; a proverb, yeast; or else they tinscribe nor. Yet yet dewlap bed. Twho may be, let him love fellows of a polecat. Now amour, the, twhose being, drunk, yet twhitch and, an enclosed valley’s always a laugh. In acquisitiendum the Furies are Earth; in (he takes up) a lump vehicles bien.”
             Nick Richardson described the translation “like extreme Mallarmé, or a Burroughsian cut-up, or a paragraph of Finnegans Wake. Bits of it have surprising power: the desperate insistence on loving and pursuing sorrow, for instance, that is cheated out of its justification – an incomplete object that has been either fished for, or wished for.”</p>
 
+            Don't bother typing “lorem ipsum” into Google translate. If you already tried, you may have gotten anything from "NATO" to "China", depending on how you capitalized the letters. The bizarre translation was fodder for conspiracy theories, but Google has since updated its “lorem ipsum” translation to, boringly enough, “lorem ipsum”.
+
+            One brave soul did take a stab at translating the almost-not-quite-Latin. According to The Guardian, Jaspreet Singh Boparai undertook the challenge with the goal of making the text “precisely as incoherent in English as it is in Latin - and to make it incoherent in the same way”. As a result, “the Greek 'eu' in Latin became the French 'bien' [...] and the '-ing' ending in 'lorem ipsum' seemed best rendered by an '-iendum' in English.”
+            
+            Here is the classic lorem ipsum passage followed by Boparai's odd, yet mesmerizing version:
+            
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.”
+            Boparai's version:
+            
+            “Rrow itself, let it be sorrow; let him love it; let him pursue it, ishing for its acquisitiendum. Because he will ab hold, uniess but through concer, and also of those who resist. Now a pure snore disturbeded sum dust. He ejjnoyes, in order that somewon, also with a severe one, unless of life. May a cusstums offficer somewon nothing of a poison-filled. Until, from a twho, twho chaffinch may also pursue it, not even a lump. But as twho, as a tank; a proverb, yeast; or else they tinscribe nor. Yet yet dewlap bed. Twho may be, let him love fellows of a polecat. Now amour, the, twhose being, drunk, yet twhitch and, an enclosed valley’s always a laugh. In acquisitiendum the Furies are Earth; in (he takes up) a lump vehicles bien.”
+            Nick Richardson described the translation “like extreme Mallarmé, or a Burroughsian cut-up, or a paragraph of Finnegans Wake. Bits of it have surprising power: the desperate insistence on loving and pursuing sorrow, for instance, that is cheated out of its justification – an incomplete object that has been either fished for, or wished for.”</p>
 
 
 
