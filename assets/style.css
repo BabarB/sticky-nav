@@ -26,10 +26,16 @@
 /* Navbar active class */
 
 #navbar .active{
-    color: green;
+    background-color: green;
 }
 /* Page content */
 
 .content {
     padding: 16px;
+}
+
+.stickyCssClass{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
