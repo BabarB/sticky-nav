@@ -1,5 +1,7 @@
+
 const navbar = document.getElementById ("navbar");
 const sticky = navbar.offsetTop;
+console.log (sticky);
 
 
 function myFunction() {
